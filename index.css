@@ -1,0 +1,29 @@
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.parent{
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    gap: 20px;
+    width: 350px;
+}
+
+#button{
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+}
+
+.active{
+    background-color: green;
+}
