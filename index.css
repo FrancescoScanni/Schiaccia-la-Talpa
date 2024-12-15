@@ -1,22 +1,26 @@
 body{
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+    
     width: 100vw;
     height: 100vh;
     background: rgb(153,74,0);
     background: linear-gradient(90deg, rgba(153,74,0,1) 0%, rgba(31,125,7,1) 100%);
 }
-.hero{
-    margin-top: 30px;
+.hero1{
+    margin-top: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
-
 
 .parent{
     display: grid;
     grid-template-columns: repeat(3,3fr);
     gap: 20px;
-    width: 350px;
+    width: 640px;
 }
 
 #button{
@@ -25,17 +29,50 @@ body{
 }
 
 .box{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background-color: brown;
+}
+
+#den{
+    width: 200px;
+    height: 200px;
 }
 
 .active{
     background-color: green;
 }
 
+
+
+
+
 .life{
-    margin-top: 20px;
+    position: relative;
+    right: 90px;
+    bottom: 45px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.stars{
+    position: relative;
+    left: 90px;
+    bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nes-progress{
+    width: 100px;
+    height: 30px;
+}
+
+section{
+    position: relative;
+    right: 100px;
+    right: 100px;
 }
