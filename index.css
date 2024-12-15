@@ -13,7 +13,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .parent{
@@ -25,7 +24,13 @@ body{
 
 #button{
     margin-top: 30px;
-    width: 100px;
+    width: 150px;
+    height: 75px;
+
+    color: blue;
+    font-weight: bold;
+    font-size: 25px;
+    font-family:'Press Start 2P', monospace;
 }
 
 .box{
@@ -38,41 +43,44 @@ body{
     width: 200px;
     height: 200px;
 }
-
 .active{
     background-color: green;
 }
 
 
-
-
-
-.life{
+.figures{
     position: relative;
-    right: 90px;
+    right: 50px;
     bottom: 45px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-   
+    align-items: center; 
 }
-
 .stars{
-    position: relative;
-    left: 90px;
-    bottom: 45px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    left: 50px;
 }
 
-.nes-progress{
-    width: 100px;
-    height: 30px;
+
+
+.icon{
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    
 }
 
-section{
+
+.nes-balloon.from-left{
     position: relative;
-    right: 100px;
-    right: 100px;
+    bottom: 100px;
+    width: 50%;
+    height: 100px;
+
+    color: red;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100%;
 }
+
+
+
