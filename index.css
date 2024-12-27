@@ -1,75 +1,112 @@
 body{
-    display: flex;
-    justify-content: center;
-    align-items: first baseline;
-    
     width: 100vw;
     height: 100vh;
     background: rgb(153,74,0);
     background: linear-gradient(90deg, rgba(153,74,0,1) 0%, rgba(31,125,7,1) 100%);
 }
-.hero1{
-    margin-top: 5%;
+
+
+.hero{
     display: flex;
-    flex-direction: column;
+    width: 100vw;
+}
+.variant-one{
+    display: flex;
+    justify-content: space-around;
     align-items: center;
 }
+.variant-two{
+    justify-content: center;
+    align-items: center;
+}
+.variant-three{
+    justify-content: center;
+}
 
-.parent{
+
+
+
+#title{
+    width: 15rem;
+    height: 12rem;
+}
+.logos{  /*LOGHI*/
+    display: flex;
+    gap:1rem;
+}
+
+
+
+
+
+
+.parent{  /*Griglia*/
     display: grid;
     grid-template-columns: repeat(3,3fr);
     gap: 20px;
     width: 640px;
 }
 
-#button{
-    margin-top: 30px;
-    width: 150px;
-    height: 75px;
-
-    color: blue;
-    font-weight: bold;
-    font-size: 25px;
-    font-family:'Press Start 2P', monospace;
-}
-
 .box{
-    width: 200px;
-    height: 200px;
-    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12.5rem;
+    height: 12.5rem;
+    
 }
 
 #den{
-    width: 200px;
-    height: 200px;
+    width: 12rem;
+    height: 12rem;
 }
-.active{
-    background-color: green;
+
+.mole{
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    margin-right: 2rem;
+    opacity: 1;
+    bottom: -100px;  /*prova*/
+    
 }
+
+.hit{
+    transform: translateY(-100%);
+}
+
+.hide{
+    opacity: 0;
+}
+
+
+
+
+
+
+
 
 
 .figures{
-    position: relative;
     right: 50px;
     bottom: 45px;
     display: flex;
     flex-direction: column;
     align-items: center; 
 }
+/*
 .stars{
     left: 50px;
 }
 
+*/
 
-
-.icon{
+.icon{  /*WELL*/
     position: absolute;
     top: 200px;
     left: 100px;
     
 }
-
-
 .nes-balloon.from-left{
     position: relative;
     bottom: 100px;
@@ -83,10 +120,32 @@ body{
 }
 
 
-.logos{
-    position: absolute;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#button{
+    margin-top: 30px;
+    width: 150px;
+    height: 75px;
+    color: blue;
+    font-weight: bold;
+    font-size: 25px;
+    font-family:'Press Start 2P', monospace;
 }
-
-
-
