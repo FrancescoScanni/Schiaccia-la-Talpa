@@ -1,8 +1,15 @@
 body{
     width: 100vw;
     height: 100vh;
+    background-image: url("https://img.freepik.com/foto-premium/cartone-animato-prato-paesaggio-campi-verdi-estivi-vista-primavera-prato-collina-e-cielo-blu_733139-2833.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*
     background: rgb(153,74,0);
     background: linear-gradient(90deg, rgba(153,74,0,1) 0%, rgba(31,125,7,1) 100%);
+    */
+    
 }
 
 
@@ -42,37 +49,39 @@ body{
 
 .parent{  /*Griglia*/
     display: grid;
-    grid-template-columns: repeat(3,3fr);
-    gap: 20px;
-    width: 640px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.25rem;
+    width: 40rem;
 }
-
 .box{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 12.5rem;
     height: 12.5rem;
-    
 }
-
 #den{
     width: 12rem;
     height: 12rem;
+    position: relative;
+    z-index: 2;
 }
 
 .mole{
-    width: 10rem;
-    height: 10rem;
+    width: 12rem;
+    height: 8rem;
     position: absolute;
+    z-index: 1;
     margin-right: 2rem;
-    opacity: 1;
-    bottom: -100px;  /*prova*/
+    opacity: 0;
+    margin-bottom:5%;  /*prova fatta per non far verere la base dell immagin*/
+    transition: margin-bottom 0.1s ease-in, opacity 0.1s ease-in; 
     
 }
 
 .hit{
-    transform: translateY(-100%);
+    margin-bottom: 10%;
+    opacity: 1;
 }
 
 .hide{
@@ -118,11 +127,6 @@ body{
     font-family: 'Courier New', Courier, monospace;
     font-size: 100%;
 }
-
-
-
-
-
 
 
 
