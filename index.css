@@ -17,17 +17,21 @@ body{
     width: 100vw;
 }
 .variant-one{
-    display: flex;
     justify-content: space-around;
     align-items: center;
 }
 .variant-two{
+    justify-content: center;
+    padding-bottom: 100px;
+}
+.variant-three{
     justify-content: space-around;
     align-items: center;
 }
-.variant-three{
+.variant-four{
     justify-content: center;
 }
+
 
 
 
@@ -49,7 +53,7 @@ body{
 .parent{  /*Griglia*/
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 1.25rem;
+    row-gap: 1.25rem;
     width: 40rem;
 }
 .box{
@@ -57,27 +61,26 @@ body{
     justify-content: center;
     align-items: center;
     width: 12.5rem;
-    height: 12.5rem;
+    height: 10rem;
 }
 .den{
     width: 12rem;
-    height: 10rem;
+    height: 8rem;
     position: relative;
     z-index: 2;
 }
 .mole{
-    width: 12rem;
-    height: 10rem;
+    width: 10rem;
+    height: 8rem;
     position: absolute;
     z-index: 1;
     margin-right: 2rem;
     opacity: 0;
     margin-bottom:5%;  /*prova fatta per non far verere la base dell immagin*/
     transition: margin-bottom 0.2s linear, opacity 0.1s ease-in; 
-    
 }
 .hit{  /*Talpa che sbuca*/
-    margin-bottom: 10%;
+    margin-bottom: 7.5%;
     opacity: 1;
 }
 
@@ -153,8 +156,84 @@ li{
     margin-bottom: 5%;
 }
 
-li::before{
+
+    
+#instr1::before {
     content: "";
+    background-image: url("static/images/pngtree-wooden-cartoon-hammer-image_1286012-removebg-preview_resized.png");
+    background-size: 32px 32px;   
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    position: absolute; 
+    display: block;
+    counter-increment: listItem;
+    right: 15.5%;
+}
+#instr2::before {
+    content: "";
+    background-image: url("static/images/images-removebg-preview (1).png");
+    background-size: 32px 32px;   
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    position: absolute; 
+    display: block;
+    counter-increment: listItem;
+    right: 15.5%;
+}
+#instr3::before {
+    content: "";
+    background-image: url("static/images/images-removebg-preview (2).png");
+    background-size: 32px 32px;   
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    position: absolute; 
+    display: block;
+    counter-increment: listItem;
+    right: 15.5%;
+}
+#instr4::before {
+    content: "";
+    background-image: url("static/images/images-removebg-preview (3).png");
+    background-size: 32px 32px;   
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    position: absolute; 
+    display: block;
+    counter-increment: listItem;
+    right: 15.5%;
+}
+
+li::marker{
+   content: "";
+}
+
+
+
+
+.bomb{
+    width: 14rem;
+    height: 8rem;
+    position: absolute;
+    
+    margin-left: 2.5%;
+    opacity: 0;
+     /*prova fatta per non far verere la base dell immagin*/
+    transition: margin-bottom 0.2s linear, opacity 0.1s ease-in; 
+    z-index: 2;
+    
+}
+
+
+
+
+
+
+#cronometro{
+    width: 50vw;
     
 }
 
@@ -170,15 +249,8 @@ li::before{
 
 
 
-
-
-
-
-
-
-
 #button{
-    margin-top: 30px;
+    bottom: 20%;
     width: 150px;
     height: 75px;
     color: blue;
