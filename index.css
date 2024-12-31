@@ -5,13 +5,10 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /*
-    background: rgb(153,74,0);
-    background: linear-gradient(90deg, rgba(153,74,0,1) 0%, rgba(31,125,7,1) 100%);
-    */
 }
 
 
+/*Blocchi di elementi*/
 .hero{
     display: flex;
     width: 100vw;
@@ -34,22 +31,35 @@ body{
 
 
 
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
+
+/*Hero1 - titolo e loghi/collegamenti*/
 #title{
     width: 15rem;
     height: 12rem;
 }
-.logos{  /*LOGHI*/
+.logos{
     display: flex;
     gap:1rem;
 }
+/*-----------------------------------------------------------------*/
 
 
 
 
+/*Hero2 - timer scadenza round*/
+#cronometro{
+    width: 50vw;  
+}
+
+/*-----------------------------------------------------------------*/
 
 
+
+
+/*Hero3 - griglia, tana, talpe, bombe + funzione attivazione itemsa*/
 .parent{  /*Griglia*/
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -79,23 +89,43 @@ body{
     margin-bottom:5%;  /*prova fatta per non far verere la base dell immagin*/
     transition: margin-bottom 0.2s linear, opacity 0.1s ease-in; 
 }
+.bomb{
+    width: 14rem;
+    height: 8rem;
+    position: absolute;
+    margin-left: 2.5%;
+    opacity: 0;
+     /*prova fatta per non far verere la base dell immagin*/
+    transition: margin-bottom 0.2s linear, opacity 0.1s ease-in; 
+    z-index: 2; 
+}
 .hit{  /*Talpa che sbuca*/
     margin-bottom: 7.5%;
     opacity: 1;
 }
 
+/*-----------------------------------------------------------------*/
 
 
 
+
+/*Hero3 - items vita e punti (cuori e stelle)*/
 .figures{
     display: flex;
     flex-direction: column;
 }
+.icon{  /*WELL*/
+    position: absolute;
+    top: 200px;
+    left: 100px;
+}
+
+/*-----------------------------------------------------------------*/
 
 
 
 
-
+/*Hero3 - blocco punteggio round*/
 .punteggio{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 2rem;
@@ -122,9 +152,12 @@ body{
     font-weight: bold;
 }
 
+/*-----------------------------------------------------------------*/
 
 
 
+
+/*Hero3 - blocco lista suggerimenti e regole*/
 .aiuto{
     font-family:'Press Start 2P', monospace;
     background-color: antiquewhite;
@@ -134,7 +167,6 @@ body{
     border: dashed 5px rgb(0, 117, 31);
 
 }
-
 #advices{
     color: rgb(0, 117, 31);
     margin-top: 5%;
@@ -143,7 +175,6 @@ body{
     font-size: 1rem;
     font-weight: bold;
 }
-
 .rules{
     color: black;
     font-size: 0.65rem;
@@ -151,13 +182,9 @@ body{
     margin-left: 5%;
     margin-right: 5%;
 }
-
 li{
     margin-bottom: 5%;
-}
-
-
-    
+}   
 #instr1::before {
     content: "";
     background-image: url("static/images/pngtree-wooden-cartoon-hammer-image_1286012-removebg-preview_resized.png");
@@ -206,49 +233,16 @@ li{
     counter-increment: listItem;
     right: 15.5%;
 }
-
 li::marker{
    content: "";
 }
 
-
-
-
-.bomb{
-    width: 14rem;
-    height: 8rem;
-    position: absolute;
-    
-    margin-left: 2.5%;
-    opacity: 0;
-     /*prova fatta per non far verere la base dell immagin*/
-    transition: margin-bottom 0.2s linear, opacity 0.1s ease-in; 
-    z-index: 2;
-    
-}
+/*-----------------------------------------------------------------*/
 
 
 
 
-
-
-#cronometro{
-    width: 50vw;
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*Hero4 - pulsante inizio gioco*/
 #button{
     bottom: 20%;
     width: 150px;
@@ -259,20 +253,6 @@ li::marker{
     font-family:'Press Start 2P', monospace;
 }
 
+/*-----------------------------------------------------------------*/
 
-.icon{  /*WELL*/
-    position: absolute;
-    top: 200px;
-    left: 100px;
-}
-.nes-balloon.from-left{
-    position: relative;
-    bottom: 100px;
-    width: 50%;
-    height: 100px;
 
-    color: red;
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 100%;
-}

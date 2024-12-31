@@ -26,13 +26,6 @@ function generateRandomBombIndex(){
     return Math.floor(Math.random()*9)   //sostiture con 9 per l'index bomba
 }
 
-function countdown(){
-    while(!finito){
-        setTimeout(function(){
-            timer.value=timer.value-1000
-        },1000)
-    }
-}
 
 //generazioe tempo durata randomico
 function generateRandomTime(max,min){
@@ -115,7 +108,7 @@ function explode(){
 
 //inizio gioco
 function start(){
-    countdown()
+    countdown()  //barra del timer
     err=-1
     right=-1
     for(let i=0;i<life.length;i++){
@@ -142,6 +135,15 @@ function start(){
     
 }
 
+
+//timer termine round
+function countdown(){
+    while(!finito){
+        setTimeout(function(){
+            timer.value=timer.value-1000
+        },1000)
+    }
+}
 
 //-----------------------------------------------MAIN-----------------------------------------------
 
