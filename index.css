@@ -14,6 +14,7 @@ body{
     transition: opacity 0.2s linear;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -21,16 +22,46 @@ body{
     position: absolute;
     z-index: 2;
     opacity: 1;
-    background-color: rgba(255, 255, 0, 0.4);
+    background-color: rgba(255, 166, 0, 0.3);
 }
 .additionl-bg-well{
     opacity: 1;
     background-color: rgba(0, 255, 0, 0.2);
 }
+.additionl-bg-win{
+    opacity: 1;
+    background-color: rgba(255, 255, 0, 0.5);
+}
+.additionl-bg-lose{
+    opacity: 1;
+    background-color: rgba(255, 0, 0, 0.3);
+}
 #cup{
     position: relative;
     z-index: 1;
 }
+#gameover{
+    position: absolute;
+    z-index: 2;
+}
+
+#winner{
+    color: rgb(242, 255, 0);
+    position: relative;
+}
+#loser{
+    margin-top: 28%;
+    color: rgb(242,0, 0);
+    position: absolute;
+}
+.finalmess{
+    font-family:'Press Start 2P', monospace;
+    font-weight: bold;
+    font-size: 5rem;
+    z-index: 2;
+}
+
+
 
 /*Blocchi di elementi*/
 .hero{
