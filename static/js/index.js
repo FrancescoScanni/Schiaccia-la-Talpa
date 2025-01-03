@@ -1,4 +1,5 @@
-
+let sec_bg=document.querySelector("#sec-layer")
+let cup=document.querySelector("#cup")
 let button=document.querySelector("#button")
 let punti=document.querySelector("#punti")
 let timer=document.querySelector("#cronometro")
@@ -8,6 +9,7 @@ let mole=document.querySelectorAll(".mole")
 let bomb=document.querySelectorAll(".bomb")
 let tana=document.querySelectorAll(".den")
 
+const durata=20000  //durata complessiva gioco (si può cambiare tutto  modificando la durata mas olo da questa riga )
 let finito //booleana fine/inizio gioco
 let score  //punteggio talpe prese
 let max   //massimo tempo di durata item
@@ -40,7 +42,7 @@ function generateRandomBombTime(max,min){
 function show() {
     index = generateRandomIndex()
     let time = generateRandomTime(700, 2000)
-    console.log(time)  //debug
+    //console.log(time)  //debug
     while(index===indexB){
         index=generateRandomIndex()
     }
@@ -53,7 +55,11 @@ function show() {
         if (!finito) {
             show()
         } else {
+            if(score===5){
+                cup.style.visibility="visible"
+            }
             button.style.visibility = "visible"
+
         }
     }, time);
 }
@@ -88,11 +94,22 @@ function showBomb(){
 function hit() {
     right=right+1
     stars[right].classList.remove("is-transparent") 
-
     mole[index].classList.remove("hit")
     score++
     punti.innerHTML = score  
-    console.log(score) //debig
+    //console.log(score) //debig
+    
+    sec_bg.style.opacity="1"
+    sec_bg.classList.add("additionl-bg-well")   //sfondo giallo che indica errore
+    setTimeout(function(){
+        sec_bg.classList.remove("additionl-bg-well")
+    },500)
+
+    if(score===5){
+        finito=true
+        console.log(finito)
+    }
+    
 }
 function explode(){
     err=err+1
@@ -103,12 +120,30 @@ function explode(){
     //rimozione cuore
     console.log("boom")
       //riduci vita
+
+    sec_bg.style.opacity="1"
+    sec_bg.classList.add("additionl-bg-err")   //sfondo verde che indica punto
+    setTimeout(function(){
+        sec_bg.classList.remove("additionl-bg-err")
+    },500)
 }
 
 
 //inizio gioco
 function start(){
-    countdown()  //barra del timer
+    cup.style.visibility="hidden"
+    timer.value=durata  //il tempo e si resetta
+    timer.max=durata
+    let intervallo_timer = setInterval(function(){
+        if (!finito){
+            timer.value=timer.value-1000
+            console.log(timer.value)
+        }
+        else{
+            clearInterval(intervallo_timer)
+        }
+    }, 1000);
+    
     err=-1
     right=-1
     for(let i=0;i<life.length;i++){
@@ -131,19 +166,10 @@ function start(){
         finito=true
 
         
-    },10000)
+    },durata)
     
 }
 
-
-//timer termine round
-function countdown(){
-    while(!finito){
-        setTimeout(function(){
-            timer.value=timer.value-1000
-        },1000)
-    }
-}
 
 //-----------------------------------------------MAIN-----------------------------------------------
 

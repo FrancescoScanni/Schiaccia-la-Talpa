@@ -6,7 +6,31 @@ body{
     background-size: cover;
     background-position: center;
 }
+#sec-layer{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.2s linear;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.additionl-bg-err{
+    position: absolute;
+    z-index: 2;
+    opacity: 1;
+    background-color: rgba(255, 255, 0, 0.4);
+}
+.additionl-bg-well{
+    opacity: 1;
+    background-color: rgba(0, 255, 0, 0.2);
+}
+#cup{
+    position: relative;
+    z-index: 1;
+}
 
 /*Blocchi di elementi*/
 .hero{
@@ -77,13 +101,13 @@ body{
     width: 12rem;
     height: 8rem;
     position: relative;
-    z-index: 2;
+    
 }
 .mole{
     width: 10rem;
     height: 8rem;
     position: absolute;
-    z-index: 1;
+    
     margin-right: 2rem;
     opacity: 0;
     margin-bottom:5%;  /*prova fatta per non far verere la base dell immagin*/
