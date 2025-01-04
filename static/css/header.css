@@ -1,0 +1,9 @@
+/*Hero1 - titolo e loghi/collegamenti*/
+#title{
+    width: 20rem;
+    height: 12rem;
+}
+.logos{
+    display: flex;
+    gap:1rem;
+}

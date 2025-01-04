@@ -18,7 +18,7 @@ const esplosione=new Audio("static/audio/boom.mp3")
 const vittoria=new Audio("static/audio/victory.mp3")
 const sconfitta=new Audio("static/audio/gameover.mp3")
 
-//variabili globali
+//variabili globali -->
 const durata=20000  //durata complessiva gioco (si può cambiare tutto  modificando la durata mas olo da questa riga )
 let finito //booleana fine/inizio gioco
 let score  //punteggio talpe prese
@@ -28,6 +28,8 @@ let index  //indice talpa
 let indexB   //indice bomba
 let err  //errori click bomba
 let right  //punti su talpe
+let intervallo_timer //intervallo che sottrae un secondo alla volta per il timer
+let fine  //set timeout di fine round
 
 
 //generazione indici talpe e bombe
@@ -155,7 +157,8 @@ function explode(){
 //inizio gioco
 function start(){
     //blocchi annullamento inizio gioco
-    
+    timer.value=durata  
+    timer.max=durata
     sec_bg.classList.remove("additionl-bg-win")
     cup.style.visibility="hidden"
     winner.style.visibility="hidden"
@@ -163,19 +166,18 @@ function start(){
     gameover.style.visibility="hidden"
     loser.style.visibility="hidden"
 
-    //il tempo e si resetta e riprende il tutto
-    timer.value=durata  
-    timer.max=durata
-    let intervallo_timer = setInterval(function(){
-        if (!finito){
-            timer.value=timer.value-1000
-            console.log(timer.value)
+    if (intervallo_timer) {
+        clearInterval(intervallo_timer) //blocco i timer precedenti residui
+    }
+    intervallo_timer = setInterval(function () {
+        if (!finito) {
+            timer.value-=1000;
         }
         else{
-            clearInterval(intervallo_timer)
+            clearInterval(intervallo_timer) //blocco i timer residui
         }
     }, 1000);
-    
+
     err=-1
     right=-1
     for(let i=0;i<life.length;i++){
@@ -191,14 +193,36 @@ function start(){
     punti.innerHTML="-"
     show()
     showBomb()
-    setTimeout(function(){
-        for(let i=0;i<mole.length;i++){
-            mole[i].removeEventListener("click",hit)   //rimozione eventlistener in modo da non avere una talpa ancora cliccabile quando termina il tempo
-        }
-        finito=true
+    clearTimeout(fine)
 
-        
-    },durata)
+    // Interrompe il gioco dopo la durata specificata
+    fine=setTimeout(function () {
+
+        for (let i = 0; i < mole.length; i++) {
+            mole[i].removeEventListener("click", hit)
+        }
+        finito = true
+        button.style.visibility = "visible";  // Rende il bottone visibile per un nuovo gioco
+
+        // Puoi aggiungere eventuale logica di fine gioco qui, se necessario.
+        if (score === 5) {
+            clearTimeout(fine)
+        } else {
+            if(err===2){
+                clearTimeout(fine)
+            }
+            sconfitta.play()
+            sec_bg.classList.add("additionl-bg-lose")
+            loser.style.visibility="visible"
+            gameover.style.visibility="visible"
+        }
+    }, durata);
+
+  
+
+
+   
+      //annuklare il timeout perchè altrimenti il gioco si blocca dopo una vittoria/sconfitta
     
 }
 

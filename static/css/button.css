@@ -1,0 +1,9 @@
+/*Hero4 - pulsante inizio gioco*/
+#button{
+    width:10vw;
+    height: 7.5vh; /* L'altezza è il 4% dell'altezza della finestra */
+    color: blue;
+    font-weight: bold;
+    font-size: 1vw;
+    font-family:'Press Start 2P', monospace;
+}

@@ -1,0 +1,79 @@
+/*Hero3 - blocco lista suggerimenti e regole*/
+.aiuto{
+    font-family:'Press Start 2P', monospace;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    width: 15%;
+    height: 2000%;
+    border: dashed 5px rgb(0, 117, 31);
+
+}
+#advices{
+    color: rgb(0, 117, 31);
+    margin-top: 5%;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.rules{
+    color: black;
+    font-size: 0.65rem;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+li{
+    margin-bottom: 5%;
+}   
+#instr1::before {
+    content: "";
+    background-image: url("/static/images/martello.png");
+    background-size: 32px 32px;   
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    position: absolute; 
+    display: block;
+    counter-increment: listItem;
+    right: 15.5%;
+}
+#instr2::before {
+    content: "";
+    background-image: url("/static/images/orologio.png");
+    background-size: 32px 32px;   
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    position: absolute; 
+    display: block;
+    counter-increment: listItem;
+    right: 15.5%;
+}
+#instr3::before {
+    content: "";
+    background-image: url("/static/images/stella.png");
+    background-size: 32px 32px;   
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    position: absolute; 
+    display: block;
+    counter-increment: listItem;
+    right: 15.5%;
+}
+#instr4::before {
+    content: "";
+    background-image: url("/static/images/cuore.png");
+    background-size: 32px 32px;   
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    position: absolute; 
+    display: block;
+    counter-increment: listItem;
+    right: 15.5%;
+}
+li::marker{
+   content: "";
+}

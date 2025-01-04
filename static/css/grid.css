@@ -1,0 +1,15 @@
+
+/*Hero3 - griglia, tana, talpe, bombe + funzione attivazione itemsa*/
+.parent {  
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 1.25rem;
+    width: 36vw;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12vw;
+    height: 15vh;
+}

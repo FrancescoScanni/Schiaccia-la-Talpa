@@ -1,0 +1,21 @@
+
+/*Blocchi di elementi*/
+.hero{
+    display: flex;
+    width: 100vw;
+}
+.variant-one{
+    justify-content: space-around;
+    align-items: center;
+}
+.variant-two{
+    justify-content: center;
+    padding-bottom: 5%;
+}
+.variant-three{
+    justify-content: space-around;
+    align-items: center;
+}
+.variant-four{
+    justify-content: center;
+}
