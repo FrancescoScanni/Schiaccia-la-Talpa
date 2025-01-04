@@ -28,50 +28,46 @@ li{
 }   
 #instr1::before {
     content: "";
-    background-image: url("static/images/martello.png");
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/012/067/331/small/judge-wood-hammer-png.png");
     background-size: 32px 32px;   
     background-repeat: no-repeat;
     width: 32px;
     height: 32px;
     position: absolute; 
     display: block;
-    counter-increment: listItem;
     right: 15.5%;
 }
 #instr2::before {
     content: "";
-    background-image: url("static/images/orologio.png");
+    background-image: url("https://gasbasgarage.it/wp-content/uploads/2021/09/Gasbas_orari.png");
     background-size: 32px 32px;   
     background-repeat: no-repeat;
     width: 32px;
     height: 32px;
     position: absolute; 
     display: block;
-    counter-increment: listItem;
     right: 15.5%;
 }
 #instr3::before {
     content: "";
-    background-image: url("static/images/stella.png");
+    background-image: url("https://png.pngtree.com/png-clipart/20220620/original/pngtree-yellow-star-commercial-element-png-image_8129257.png");
     background-size: 32px 32px;   
     background-repeat: no-repeat;
     width: 32px;
     height: 32px;
     position: absolute; 
     display: block;
-    counter-increment: listItem;
     right: 15.5%;
 }
 #instr4::before {
     content: "";
-    background-image: url("static/images/cuore.png");
+    background-image: url("https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_640.png");
     background-size: 32px 32px;   
     background-repeat: no-repeat;
     width: 32px;
     height: 32px;
     position: absolute; 
     display: block;
-    counter-increment: listItem;
     right: 15.5%;
 }
 li::marker{
