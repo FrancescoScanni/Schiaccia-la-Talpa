@@ -28,7 +28,7 @@ li{
 }   
 #instr1::before {
     content: "";
-    background-image: url("/static/images/martello.png");
+    background-image: url("static/images/martello.png");
     background-size: 32px 32px;   
     background-repeat: no-repeat;
     width: 32px;
@@ -40,7 +40,7 @@ li{
 }
 #instr2::before {
     content: "";
-    background-image: url("/static/images/orologio.png");
+    background-image: url("static/images/orologio.png");
     background-size: 32px 32px;   
     background-repeat: no-repeat;
     width: 32px;
@@ -52,7 +52,7 @@ li{
 }
 #instr3::before {
     content: "";
-    background-image: url("/static/images/stella.png");
+    background-image: url("static/images/stella.png");
     background-size: 32px 32px;   
     background-repeat: no-repeat;
     width: 32px;
@@ -64,7 +64,7 @@ li{
 }
 #instr4::before {
     content: "";
-    background-image: url("/static/images/cuore.png");
+    background-image: url("static/images/cuore.png");
     background-size: 32px 32px;   
     background-repeat: no-repeat;
     width: 32px;
