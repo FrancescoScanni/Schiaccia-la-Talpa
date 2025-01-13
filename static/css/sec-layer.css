@@ -58,3 +58,22 @@
     font-size: 5rem;
     z-index: 2;
 }
+
+
+/*MQ gestione schermata vittoria/sconfittta*/
+
+@media (max-width: 768px) {
+    #cup{
+        width: 60vw;
+        height: 30vh;
+    }
+    #gameover{
+        width: 60vw;
+        height: 20vh;
+    }
+    
+    .finalmess{
+        width: 90vw;
+        font-size: 1.75rem;
+    }
+}

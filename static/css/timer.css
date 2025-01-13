@@ -3,3 +3,10 @@
     width: 50vw;
     height: 5vh;  
 }
+
+/*Media query gestione altezza timer per dare spqzio sotto*/
+@media (max-width: 768px) {
+    #cronometro{
+        height: 2.5vh;
+    }
+  }

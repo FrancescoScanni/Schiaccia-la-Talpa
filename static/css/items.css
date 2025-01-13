@@ -3,7 +3,6 @@
     width: 100%;
     height: 80%;
     position: relative;
-    
 }
 .mole{
     width: 12.5vw;
@@ -37,3 +36,33 @@
     display: flex;
     flex-direction: column;
 }
+
+
+
+/*Media query gestione items (tana, talpa, bomba...)*/
+
+@media (max-width: 768px) {
+    .variant-three{
+        flex-direction: column;
+    }
+    .figures{
+        flex-direction: row;
+    }
+    .den{
+        height: 70%;
+    }
+    .mole{
+        width: 11%;
+        height: 5%;
+        margin-bottom: 9%;
+    }
+    .bomb{
+        width: 11%;
+        height: 5%;
+    }
+    .hit{
+        margin-bottom: 12%;
+    }
+
+
+  }

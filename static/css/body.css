@@ -6,3 +6,11 @@ body{
     background-size: cover;
     background-position: center;
 }
+
+/*Media query usata per adattare uno sfondo differente in caso di schermo da 768px (mobile*/
+@media (max-width: 768px) {
+    body {
+      background-color: lightblue;
+      background-image: url("https://img.freepik.com/vettori-premium/priorita-bassa-di-paesaggio-con-erba-verde-e-cielo-blu_961004-280.jpg?semt=ais_hybrid");
+    }
+  }

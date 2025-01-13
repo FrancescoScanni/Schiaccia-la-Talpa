@@ -4,7 +4,7 @@
     background-color: antiquewhite;
     border-radius: 10px;
     width: 15%;
-    height: 2000%;
+    height: 35vh;
     border: dashed 5px rgb(0, 117, 31);
 
 }
@@ -18,7 +18,7 @@
 }
 .rules{
     color: black;
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     margin-top: 10%;
     margin-left: 5%;
     margin-right: 5%;
@@ -73,3 +73,46 @@ li{
 li::marker{
    content: "";
 }
+
+
+/*Media query per paragrafo delle regole*/
+@media (max-width: 768px) {
+    .aiuto{
+        width: 45vw;
+        height: 15vh;
+        margin-top: 25px;
+    }
+
+    #advices{
+        font-size: 60%;
+    }
+    .rules{
+        font-size: 30%;
+    }
+
+    #instr1::before {
+        right: 62.5%;
+        background-size: 15px 15px; 
+        width: 15px;
+        height: 15px;
+    }
+    #instr2::before {
+        right: 62.5%;
+        background-size: 13px 13px; 
+        width: 13px;
+        height: 13px;
+    }
+    #instr3::before {
+        right: 62.5%;
+        background-size: 13px 13px; 
+        width: 13px;
+        height: 13px;
+    }
+    #instr4::before {
+        right: 62.5%;
+        background-size: 14px 14px; 
+        width: 14px;
+        height: 14px;
+    }
+
+  }

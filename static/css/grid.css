@@ -13,3 +13,14 @@
     width: 12vw;
     height: 15vh;
 }
+
+/*Media query gestione griglia*/
+@media (max-width: 768px) {
+    .box{
+        height: 5vh;
+    }
+    .parent{
+        margin-top: 10%;
+        padding-bottom: 7%;
+    }
+  }

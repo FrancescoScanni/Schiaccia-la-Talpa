@@ -7,3 +7,11 @@
     display: flex;
     gap:1rem;
 }
+
+/*Media quert per logo responsive nell'header*/
+@media (max-width: 768px) {
+    #title{
+        width: 40%;
+        height: 25%;
+    }
+}
